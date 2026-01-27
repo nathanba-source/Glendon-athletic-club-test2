@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gym 3D Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- model-viewer -->
+  <script type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+  </script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #778399FF;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      background-color: #778399FF;
+    }
+
+    /* ===== HOTSPOTS ===== */
+    .Hotspot {
+      width: 14px;
+      height: 14px;
+      background: currentColor;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    .Hotspot span {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+      pointer-events: none;
+    }
+
+    /* ===== LEGEND ===== */
+    .legend {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.95);
+      padding: 12px 14px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      font-size: 14px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .legend-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .legend-color {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+<model-viewer
+  src="MPTESTING.glb"
+  camera-controls
+  touch-action="pan-y"
+  exposure="1"
+  shadow-intensity="1"
+  field-of-view="45deg"
+  min-camera-orbit="auto auto 5m"
+  max-camera-orbit="auto auto 200m"
+>
+
+  <!-- HOTSPOTS -->
+  <button class="Hotspot" slot="hotspot-1" style="color:#e74c3c"
+    data-position="-0.465m -1.556m 16.845m">
+    <span>Lobby</span>
+  </button>
+
+  <button class="Hotspot" slot="hotspot-2" style="color:#3498db"
+    data-position="-5.224m -1.028m -0.964m">
+    <span>Women Locker Room</span>
+  </button>
+
+  <button class="Hotspot" slot="hotspot-3" style="color:#9b59b6"
+    data-position="-6.623m -1.022m -12.298m">
+    <span>Men Locker Room</span>
+  </button>
+
+  <button class="Hotspot" slot="hotspot-4" style="color:#1abc9c"
+    data-position="-23.436m -1.043m -5.563m">
+    <span>Swimming Pool</span>
+  </button>
+
+  <button class="Hotspot" slot="hotspot-5" style="color:#f1c40f"
+    data-position="8.065m -1.033m 15.761m">
+    <span>Golf Court</span>
+  </button>
+
+  <button class="Hotspot" slot="hotspot-6" style="color:#e67e22"
+    data-position="14.131m -1.058m 15.917m">
+    <span>Boxing Room</span>
+  </button>
+
+  <button class="Hotspot" slot="hotspot-7" style="color:#2ecc71"
+    data-position="20.581m -1.039m 16.087m">
+    <span>Stretching Room</span>
+  </button>
+
+  <button class="Hotspot" slot="hotspot-8" style="color:#34495e"
+    data-position="16.158m -1.057m -3.158m">
+    <span>Weight Room</span>
+  </button>
+
+</model-viewer>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-item"><div class="legend-color" style="background:#e74c3c"></div>Lobby</div>
+  <div class="legend-item"><div class="legend-color" style="background:#3498db"></div>Women Locker Room</div>
+  <div class="legend-item"><div class="legend-color" style="background:#9b59b6"></div>Men Locker Room</div>
+  <div class="legend-item"><div class="legend-color" style="background:#1abc9c"></div>Swimming Pool</div>
+  <div class="legend-item"><div class="legend-color" style="background:#f1c40f"></div>Golf Court</div>
+  <div class="legend-item"><div class="legend-color" style="background:#e67e22"></div>Boxing Room</div>
+  <div class="legend-item"><div class="legend-color" style="background:#2ecc71"></div>Stretching Room</div>
+  <div class="legend-item"><div class="legend-color" style="background:#34495e"></div>Weight Room</div>
+</div>
+
+</body>
+</html>
