@@ -10,7 +10,9 @@ const ROOMS = [
   { id: 'men-locker', name: 'Men Locker Room', icon: '🚪', color: '#8faadc' },
   { id: 'pool', name: 'Swimming Pool', icon: '🏊', color: '#4da3ff' },
   { id: 'squash', name: 'Squash Courts', icon: '🏸', color: '#aed581' },
-  { id: 'weight', name: 'Weight Room', icon: '🏋️', color: '#7cc576' }
+  { id: 'weight', name: 'Weight Room', icon: '🏋️', color: '#7cc576' },
+  { id: 'stairs', name: 'Stairs', icon: 'S', color: '#8faadc' },
+  { id: 'exit', name: 'Exit', icon: 'E', color: '#ef5350' }
 ];
 
 class GymViewer {
@@ -103,15 +105,6 @@ class GymViewer {
         this.setHotspotActive(hotspot.element, false);
       });
     });
-
-    const legendToggle = document.getElementById('legendToggle');
-    if (legendToggle) {
-      legendToggle.addEventListener('click', () => {
-        this.legendContainer.classList.toggle('collapsed');
-        legendToggle.textContent =
-          this.legendContainer.classList.contains('collapsed') ? '▲' : '▼';
-      });
-    }
   }
 
   setHotspotActive(hotspotElement, isActive) {
@@ -165,8 +158,19 @@ class GymViewer {
     const y = parseFloat(coords[2]);
     const z = parseFloat(coords[3]);
 
-    const distance = 50;
-    this.modelViewer.cameraOrbit = `0deg 75deg ${distance}m`;
+    let distance = 50;
+    let azimuth = 0;
+    const orbit = this.modelViewer.cameraOrbit;
+    if (orbit) {
+      const orbitMatch = orbit.match(/([-\d.]+)deg\s+([-\d.]+)deg\s+([-\d.]+)m/);
+      if (orbitMatch) {
+        azimuth = parseFloat(orbitMatch[1]);
+        distance = parseFloat(orbitMatch[3]);
+      }
+    }
+
+    this.modelViewer.cameraTarget = `${x}m ${y}m ${z}m`;
+    this.modelViewer.cameraOrbit = `${azimuth}deg 70deg ${distance}m`;
     this.modelViewer.cameraTarget = `${x}m ${y}m ${z}m`;
   }
 }
