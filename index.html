@@ -5,21 +5,20 @@
   <title>Gym 3D Map</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- model-viewer -->
-  <script type="module"
-    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
-  </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
-
 <body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="logo">Glendon Athletic Club</div>
+    </div>
+  </header>
 
   <model-viewer
     id="modelViewer"
@@ -33,8 +32,6 @@
     camera-orbit="759.7deg 29.22deg 148.4m"
     field-of-view="25.11deg"
   >
-
-    <!-- MAIN ROOMS -->
     <button class="Hotspot" slot="hotspot-1"
       data-position="27.390904330345478m -1.0392850458519547m 16.580012201274265m"
       data-normal="0m 1m 0m"
@@ -131,17 +128,158 @@
       <div class="HotspotAnnotation"><span class="hotspot-icon">🏋️</span> Weight Room</div>
     </button>
 
+    <button class="Hotspot" slot="hotspot-15"
+      data-position="-2.829735463378465m -0.19069792851411638m 8.356492279692741m"
+      data-normal="0m 1m 0m"
+      data-visibility-attribute="visible"
+      data-room-id="stairs">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">S</span> Staires</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-16"
+      data-position="7.422832174034038m -1.3006349509601314m 9.74115745375149m"
+      data-normal="-3.5135427581972516e-7m 0.999999999999938m 2.5812667558964897e-8m"
+      data-visibility-attribute="visible"
+      data-room-id="stairs">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">S</span> Staires</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-17"
+      data-position="28.23069134588333m -0.48048443044932065m 4.583439719424355m"
+      data-normal="0m 1m 0m"
+      data-visibility-attribute="visible"
+      data-room-id="stairs">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">S</span> Staires</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-18"
+      data-position="-23.886421614488427m -0.5586178302765035m -37.97588748676683m"
+      data-normal="0m 1m 0m"
+      data-visibility-attribute="visible"
+      data-room-id="stairs">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">S</span> Staires</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-19"
+      data-position="-1.776457425511051m -1.4032928680126484m -38.51374238598797m"
+      data-normal="0m 1m 0m"
+      data-visibility-attribute="visible"
+      data-room-id="stairs">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">S</span> Staires</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-20"
+      data-position="-5.081348300621139m -0.04464207648327112m 25.256421937520827m"
+      data-normal="0m 0m -1m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-21"
+      data-position="-1.0122598580622604m -0.08865905082371439m 12.077287093024992m"
+      data-normal="0m 0m -1m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-22"
+      data-position="3.8482515589024855m -0.13005758892798824m 12.034615909186883m"
+      data-normal="0m 0m -1m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-23"
+      data-position="-16.26819633637127m 0.4691605567932058m 12.584834611793838m"
+      data-normal="0m 1m 0m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-24"
+      data-position="-13.627615775922486m -0.05734321561835998m 12.0456771850586m"
+      data-normal="0m 0m -1m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-26"
+      data-position="4.985427336696549m -0.403514477177355m 8.579896978665715m"
+      data-normal="0m 0m 1m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-27"
+      data-position="26.840185165405273m 1.130208208915377m 9.631507823117927m"
+      data-normal="-1m 0m 0m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-29"
+      data-position="5.023729790398587m -0.15128759205339226m 6.235178637654719m"
+      data-normal="0m 0m 1m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-30"
+      data-position="4.4811962852841845m 0.020071632040618653m -21.992162243753427m"
+      data-normal="-0.6865650985935835m 0m 0.7270683361233544m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-31"
+      data-position="4.660271922440386m 0.17489081946289528m -27.849899291992188m"
+      data-normal="0m 0m 1m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-32"
+      data-position="-0.30016326904296875m -0.04701902111897027m -33.89958702973102m"
+      data-normal="-1m 0m 0m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-34"
+      data-position="-3.9936861949360463m -0.05089333173772548m -33.98632278244247m"
+      data-normal="0.99983381820696m -4.1748872844041794e-8m 0.01823008419316189m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-35"
+      data-position="-32.661170343493666m -0.6781458171285522m -33.48184585571289m"
+      data-normal="0m 0m -1m"
+      data-visibility-attribute="visible"
+      data-room-id="exit">
+      <div class="HotspotAnnotation"><span class="hotspot-icon">E</span> EXIT</div>
+    </button>
   </model-viewer>
 
-  <div class="scene-overlay" id="sceneOverlay"></div>
-
   <div class="legend" id="legend">
-    <button class="legend-toggle" id="legendToggle" aria-label="Toggle legend">▼</button>
+    <div class="legend-topbar"></div>
     <h2 class="legend-title">First Floor Map<br>Glendon Athletic Club</h2>
   </div>
 
   <div class="logo-container">
-    <img src="GLENDON_Logo_Glendon_PRIMARY.png" alt="York University / Glendon" class="york-logo">
+    <img src="GLENDON_Logo_Glendon_PRIMARY.png" alt="Glendon Athletic Club" class="glendon-logo">
   </div>
 
   <script src="script.js"></script>
